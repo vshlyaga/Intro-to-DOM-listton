@@ -3,9 +3,9 @@
 let arr = [];
 let absCount = 0,
     tempCount = 0,
-    condition = true;
-    let absParent, parent, arrDiv, arrChildren;
-    let colors;
+    condition = true,
+absParent, parent, arrDiv, arrChildren,
+    colors;
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -89,7 +89,6 @@ function recColor(current){
                 tempCount++;//div - увеличили счётчик вложенности и вышли
                 arr[arr.length] = tempCount;
                 current.children[k].style.border = "5px solid #" + colors[tempCount];
-                console.log(current.children[k].style.border);
             }
             
             recColor(current.children[k]);
